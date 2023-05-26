@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_plant_app/constants.dart';
 import 'package:ui_plant_app/screens/screens.dart';
 
 void main() {
@@ -14,8 +15,13 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'UI Plant App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: kPrimaryColor,
+        ),
+        scaffoldBackgroundColor: kBackgroundColor,
+        colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryColor),
         useMaterial3: true,
+        textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
       ),
       home: const HomeScreen(),
     );
