@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:ui_plant_app/constants.dart';
+import 'package:ui_plant_app/screens/screens.dart';
 
 class RecommendsPlants extends StatelessWidget {
   const RecommendsPlants({
@@ -19,21 +19,42 @@ class RecommendsPlants extends StatelessWidget {
             title: 'Samantha',
             country: 'Poland',
             price: 440,
-            press: (){ debugPrint('RecommendPlantCard');},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DetailsScreen(),
+                ),
+              );
+            },
           ),
           RecommendPlantCard(
             image: 'assets/images/image_2.png',
-            title: 'Samantha',
+            title: 'Angelica',
             country: 'Poland',
-            price: 440,
-            press: (){ debugPrint('RecommendPlantCard');},
+            price: 460,
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DetailsScreen(),
+                ),
+              );
+            },
           ),
           RecommendPlantCard(
             image: 'assets/images/image_3.png',
-            title: 'Samantha',
+            title: 'Susanna',
             country: 'Poland',
-            price: 440,
-            press: (){ debugPrint('RecommendPlantCard');},
+            price: 400,
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DetailsScreen(),
+                ),
+              );
+            },
           ),
         ],
       ),
@@ -108,8 +129,8 @@ class RecommendPlantCard extends StatelessWidget {
                   Text(
                     '\$ $price',
                     style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                      color: kPrimaryColor,
-                    ),
+                          color: kPrimaryColor,
+                        ),
                   )
                 ],
               ),
